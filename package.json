@@ -31,6 +31,7 @@
     "build:test": "tsc --project test",
     "build": "npm run build:src && npm run build:test",
     "docs": "typedoc --options scripts/tdoptions.json",
+    "preinstall": "npm run build",
     "postinstall": "npm dedupe",
     "prepublish": "npm run build",
     "test": "mocha test/build/test*.js",
